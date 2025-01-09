@@ -23,17 +23,15 @@ def calculate_simplex_tax(income):
 
     return int(tax)
 
-
 if __name__ == "__main__":
     examples = [30000, 120000, 75000]
     for example in examples:
         print(f"Income: {example}, Tax: {calculate_simplex_tax(example)}")
 
-
 def test_calculate_simplex_tax():
     """Test the calculate_simplex_tax function with various test cases."""
     assert calculate_simplex_tax(30000) == 2000
-    assert calculate_simplex_tax(120000) == 19000
+    assert calculate_simplex_tax(120000) == 20000  
     assert calculate_simplex_tax(75000) == 9000
     assert calculate_simplex_tax(10000) == 0
     assert calculate_simplex_tax(50000) == 4000
@@ -41,6 +39,5 @@ def test_calculate_simplex_tax():
     assert calculate_simplex_tax(150000) == 29000
 
     print("All tests passed!")
-
 
 test_calculate_simplex_tax()
